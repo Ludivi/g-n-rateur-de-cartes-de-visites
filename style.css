@@ -1,0 +1,46 @@
+/* Style de la carte */
+#card {
+  width: 400px;
+  height: 250px;
+  box-shadow: 4px 5px 5px grey;
+  border: 1px solid black;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: auto;
+}
+
+#card .main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#card .bottom-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Thèmes de la carte */
+.red {
+  background-color: #aa1212dc;
+  color: white;
+}
+
+.blue {
+  background-color: #1254aadc;
+  color: white;
+}
+
+.green {
+  background-color: #12a537dc;
+  color: white;
+}
+
+/* Style des champs d'éditions de la carte */
+.card-edition {
+  margin-top: 10vh;
+}
