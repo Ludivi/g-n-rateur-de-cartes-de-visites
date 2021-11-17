@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Générateur de carte de visite</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="assets/styles/style.css" />
+
+    <!-- Scripts -->
+    <script defer src="https://unpkg.com/vue@next"></script>
+    <script defer src="assets/scripts/script.js"></script>
+  </head>
+
+  <body>
+    <div id="root">
+      <!-- Carte de visite-->
+      <div id="card" :class="theme">
+        <div class="main-container">
+          <p>{{firstname}} {{lastname.toUpperCase()}}</p>
+          <p>{{occupation}}</p>
+          <p>{{business}}</p>
+        </div>
+
+        <div class="bottom-container">
+          <p>{{email}}</p>
+          <p>{{phone}}</p>
+        </div>
+      </div>
+
+      <!-- Edition de la carte -->
+      <div class="card-edition">
+        <label for="firstname">Prénom: </label>
+        <input
+          type="text"
+          id="firstname"
+          name="firstname"
+          @input="handleInput"
+        />
+        <br />
+
+        <label for="lastname">Nom: </label>
+        <input type="text" id="lastname" name="lastname" @input="handleInput" />
+        <br />
+
+        <label for="occupation">Poste: </label>
+        <input
+          type="text"
+          id="occupation"
+          name="occupation"
+          @input="handleInput"
+        />
+        <br />
+
+        <label for="business">Entreprise: </label>
+        <input type="text" id="business" name="business" @input="handleInput" />
+        <br />
+
+        <label for="email">Email: </label>
+        <input type="text" id="email" name="email" @input="handleInput" />
+        <br />
+
+        <label for="phone">Téléphone: </label>
+        <input type="text" id="phone" name="phone" @input="handleInput" />
+        <br />
+
+        <button @click="switchTheme">Changer le thème de la carte</button>
+      </div>
+    </div>
+  </body>
+</html>
